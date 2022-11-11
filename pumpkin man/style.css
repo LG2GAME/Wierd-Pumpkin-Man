@@ -1,0 +1,389 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+:root {
+
+    --bg: #C9C5BA;
+
+    /* pumkin */
+    --pumpkin: #EB6424;
+    --pumpkin-shadow: #CE541B;
+    --leaf: #556F44;
+    --tail: #9C914F;
+    --hole: #02020A;
+
+    /* body */
+    --colar: #DBD4D3;
+    --chest-color: #4C5B61;
+
+    --arm: #5A352A;
+    --hand: #4C5B61;
+
+}
+
+/* pumpkin man */
+.pumpkin-man {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+/* head */
+.tail {
+    background-color: var(--tail);
+    border-radius: 0 50% 25% 35%;
+    height: 1.5vw;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -90%);
+    width: 1vw;
+}
+
+.tail::before {
+    background-color: var(--leaf);
+    border-radius: 80% 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+    transform: translate(75%, 15%);
+    width: 100%;
+}
+
+.head {
+    background-color: var(--pumpkin-shadow);
+    border-radius: 100%;
+    height: 10vw;
+    position: relative;
+    width: 10vw;
+}
+
+.head::before {
+    background-color: var(--pumpkin);
+    border-radius: 100%;
+    content: "";
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 75%;
+}
+
+.eye1 {
+    background-color: var(--hole);
+    border-radius: 12% 88% 50% 50% / 66% 100% 0% 34%;
+    height: 3vw;
+    left: 0;
+    position: absolute;
+    top: 25%;
+    transform: translateX(40%);
+    width: 3vw;
+}
+
+.eye2 {
+    background-color: var(--hole);
+    border-radius: 78% 22% 63% 37% / 54% 53% 47% 46% ;
+    height: 3vw;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    transform: translateX(-40%);
+    width: 3vw;
+}
+
+.mouth {
+    background-color: var(--hole);
+    border-radius: 10% 5% 45% 65%;
+    bottom: 5%;
+    height: 25%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 50%;
+}
+
+.tooth1 {
+    background-color: var(--pumpkin);
+    border-radius: 100% 0% 48% 52% / 0% 0% 100% 100%;
+    height: 70%;
+    left: 5%;
+    position: absolute;
+    top: -5%;
+    width: 25%;
+}
+
+.tooth2 {
+    background-color: var(--pumpkin);
+    border-radius: 100% 0% 7% 93% / 0% 0% 100% 100%;
+    height: 40%;
+    position: absolute;
+    right: 15%;
+    top: -5%;
+    width: 20%;
+}
+
+.tooth3 {
+    background-color: var(--pumpkin);
+    border-radius: 16% 84% 0% 100% / 100% 74% 26% 0%;
+    bottom: -5%;
+    height: 60%;
+    left: 50%;
+    position: absolute;
+    width: 35%;
+}
+
+/* body */
+.neck {
+    background-color: var(--pumpkin-shadow);
+    height: 20%;
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 10%;
+}
+
+.collar {
+    background-color: var(--colar);
+    border-radius: 0 0 55% 55%;
+    bottom: -50%;
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 1000%;
+}
+
+.body {
+    background-color: var(--chest-color);
+    border-radius: 50% 50% 65% 35% / 38% 26% 74% 62%;
+    height: 150%;
+    left: 50%;
+    position: absolute;
+    top: 110%;
+    transform: translateX(-50%);
+    width: 150%;
+}
+
+/* arms */
+.part1 .arm {
+    background-color: var(--arm);
+    border-radius: 0 0 25% 25%;
+    height: 80%;
+    position: absolute;
+    transform: translate(-250%, -60%) rotate(130deg);
+    width: 10%;
+}
+
+.part2 .arm {
+    background-color: var(--arm);
+    border-radius: 0 0 25% 25%;
+    height: 80%;
+    position: absolute;
+    right: 0;
+    transform: translate(260%, -65%) rotate(-135deg);
+    width: 10%;
+}
+
+.part1 .arm .forearm {
+    background-color: var(--arm);
+    border-radius: 25% 50% 40% 50%;
+    height: 100%;
+    position: absolute;
+    transform: translate(250%, 55%) rotate(95deg);
+    width: 100%;
+}
+
+.part2 .arm .forearm {
+    background-color: var(--arm);
+    border-radius: 25% 20% 45% 18%;
+    height: 100%;
+    position: absolute;
+    transform: translate(-250%, 55%) rotate(-95deg);
+    width: 100%;
+}
+
+.part1 .arm .forearm .hand {
+    background-color: var(--hand);
+    border-radius: 50% 50% 19% 29%;
+    height: 30%;
+    position: absolute;
+    transform: translate(-75%, -80%) rotate(-35deg);
+    width: 200%;
+}
+
+.part2 .arm .forearm .hand {
+    background-color: var(--hand);
+    border-radius: 48% 41% 2% 19%;
+    height: 30%;
+    position: absolute;
+    transform: translate(10%, -80%) rotate(35deg);
+    width: 200%;
+}
+
+/* fingers */
+.part1 .arm .forearm .hand .finger1 {
+    background-color: var(--arm);
+    height: 50%;
+    position: absolute;
+    width: 20%;
+    transform: translate(-125%, 80%) rotate(-75deg);
+    border-radius: 30% 0% 0% 0%;
+}
+.part1 .arm .forearm .hand .finger1::before {
+    content: "";
+    background-color: var(--arm);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transform: translate(120%,-75%) rotate(45deg);
+    border-radius: 50% 50% 0% 0%;
+}
+
+.part1 .arm .forearm .hand .finger2 {
+    background-color: var(--arm);
+    height: 50%;
+    position: absolute;
+    width: 20%;
+    transform: translate(0%, -60%) rotate(-15deg);
+}
+.part1 .arm .forearm .hand .finger2::before {
+    content: "";
+    background-color: var(--arm);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transform: translate(15%, -99%) rotate(5deg);
+    border-radius: 50% 50% 0% 0%;
+}
+
+.part1 .arm .forearm .hand .finger3 {
+    background-color: var(--arm);
+    height: 50%;
+    position: absolute;
+    width: 20%;
+    transform: translate(400%, -60%) rotate(20deg);
+}
+.part1 .arm .forearm .hand .finger3::before {
+    content: "";
+    background-color: var(--arm);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transform: translate(-80%, -85%) rotate(-35deg);
+    border-radius: 50% 50% 0% 0%;
+}
+
+.part2 .arm .forearm .hand .finger1 {
+    background-color: var(--arm);
+    height: 50%;
+    position: absolute;
+    width: 20%;
+    transform: translate(550%, 80%) rotate(85deg);
+    border-radius: 30% 0% 0% 0%;
+}
+.part2 .arm .forearm .hand .finger1::before {
+    content: "";
+    background-color: var(--arm);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transform: translate(-100%,-75%) rotate(-45deg);
+    border-radius: 50% 50% 0% 0%;
+}
+
+.part2 .arm .forearm .hand .finger2 {
+    background-color: var(--arm);
+    height: 50%;
+    position: absolute;
+    width: 20%;
+    transform: translate(0%, -60%) rotate(-15deg);
+}
+.part2 .arm .forearm .hand .finger2::before {
+    content: "";
+    background-color: var(--arm);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transform: translate(15%, -99%) rotate(5deg);
+    border-radius: 50% 50% 0% 0%;
+}
+
+.part2 .arm .forearm .hand .finger3 {
+    background-color: var(--arm);
+    height: 50%;
+    position: absolute;
+    width: 20%;
+    transform: translate(400%, -60%) rotate(20deg);
+}
+.part2 .arm .forearm .hand .finger3::before {
+    content: "";
+    background-color: var(--arm);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transform: translate(-80%, -85%) rotate(-35deg);
+    border-radius: 50% 50% 0% 0%;
+}
+
+/* legs and foots */
+.body-down-part1 .leg {
+    width: 25%;
+    height: 200%;
+    background-color: var(--arm);
+    position: absolute;
+    transform: translate(-200%, 110%) rotate(-150deg);
+    border-radius: 0% 50% 20% 20%;
+}
+
+.body-down-part2 .leg {
+    width: 25%;
+    height: 220%;
+    background-color: var(--arm);
+    position: absolute;
+    transform: translate(500%, 95%) rotate(150deg);
+    border-radius: 0% 50% 20% 20%;
+}
+
+.body-down-part1 .calf {
+    width: 15%;
+    height: 220%;
+    background-color: var(--arm);
+    position: absolute;
+    transform: translate(-450%, 180%) rotate(-10deg);
+    border-radius: 0% 0% 50% 20%;
+}
+
+.body-down-part2 .calf {
+    width: 15%;
+    height: 220%;
+    background-color: var(--arm);
+    position: absolute;
+    transform: translate(1100%, 180%) rotate(10deg);
+    border-radius: 0% 30% 20% 50%;
+}
+
+.body-down-part1 .foot {
+    width: 100%;
+    height: 25%;
+    background-color: var(--chest-color);
+    position: absolute;
+    transform: translate(-130%, 2400%);
+    border-radius: 100% 10% 0% 53%;
+}
+
+.body-down-part2 .foot {
+    width: 100%;
+    height: 25%;
+    background-color: var(--chest-color);
+    position: absolute;
+    transform: translate(130%, 2400%);
+    border-radius: 0% 100% 10% 20%;
+}
